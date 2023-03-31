@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Novas Tags do HTML 5</title>
+    </head>
+    <body>
+        <form action="/action_page.php">
+            <legend>Marcar apenas uma opção</legend><br>
+            <!--tipo = botao pra marcar uma so op/ nome = linguagem fav todas iguais pois so uma pode ser escolhida e enviada para a action_page.php-->
+            <input type="radio" id="html" name="fav-lang" value="HTML">
+            <label for="html">HTML</label><br>
+
+            <input type="radio" id="css" name="fav-lang" value="CSS">
+            <label for="css">CSS</label><br>
+
+            <input type="radio" id="js" name="fav-lang" value="JavaScript">
+            <label for="js">JavaScript</label>
+            <br><br>
+
+            <input type="submit" value="Submit">
+
+            <hr><br>
+            <legend>Cores e Datas</legend>
+
+            <label for="fav-color">Selecione sua cor favorita:</label>
+            <input type="color" name="fav-color" id="fav-color"><br>
+
+            <label for="birth">Data de nascimento:</label>
+            <input type="date" name="birth" id="birth">
+
+            <hr><br>
+
+            <label for="vol">Volume:</label>
+            <input type="range" id="vol" name="vol" min="0" max="100">
+
+            <label for="qnt">Quantidade:</label>
+            <input type="number" id="qnt" name="qnt" min="0" max="100" step="10" value="20">
+        </form>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Propriedade Position no CSS</title>
+    </head>
+<!-- Nao é muito recomendado usar a absolute pois dependendo do dispositivo infos serao perdidas na tela -->
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+        }
+
+        #d1 {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            background-color: orange;
+        }
+        #d2 {
+            position: absolute;
+            top: 150px;
+            left: 150px;
+            background-color: yellow;
+        }
+    </style>
+
+    <body>
+        <div id="d1"></div>
+        <div id="d2"></div>
+        <a href="relative.html"> position relative</a>
+    </body>
+</html>

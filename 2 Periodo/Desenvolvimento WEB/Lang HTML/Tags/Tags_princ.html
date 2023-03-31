@@ -1,0 +1,83 @@
+<html lang="pt"> <!--lang define a linguagem do meu site-->
+    <!--Raiz onde fica algumas configs gerais-->
+    
+    <!--Style é o CSS interno no HTML-->
+    <style>
+        body {
+            background-color: aqua;
+        }
+        table {
+            background-color: blueviolet;
+        }
+
+    </style>
+    <head><!--Cabeçalho-->
+        <h1>Topo da minha page</h1>
+    </head>
+    <body><!--Corpo do site-->
+        <h1>------------------------------------------------------</h1>
+        <h1>Corpo da minha page onde ficam algumas tags textuais</h1>
+        <h1>Isso é um titulo de texto.</h1>
+        <h2>Isso é como um subtitulo.</h2>
+        <h3>Isso é como um subtitulo mas um pouco menor.</h3>
+        <h4>E por assim em diante.</h4>
+        <p>Eu sou <br/> um parágrafo.</p>
+        <p>Mais um exemplo de texto.</p>
+        <a href="Exemplo002.html" title="Exemplo 2" target="_blank">Segundo Exemplo</a>
+        <strong><br/>Estou em negrito.</strong>
+        <p>----------------------------------------------------------</p>
+
+        <table><!--Tabelas devem ser usadas somente se for necessario no HTML-->
+            <thead><!--Raiz da tabela-->
+                <tr><th>Nome</th><th>Idade</th><th>CPF</th></tr><!--tr = Table row e th = Table header-->
+            </thead>
+            <tbody><!--Corpo da tabela-->
+                <tr>
+                    <td>Victor Silva</td>
+                    <td>22 anos</td>
+                    <td>123456789-02</td>
+                </tr>
+                <tr>
+                    <td>Oliveira S.</td>
+                    <td>35 anos</td>
+                    <td>123456789-02</td>
+                </tr>
+                <tr>
+                    <td>Cid Kagenou</td>
+                    <td>18 anos</td>
+                    <td>123456789-02</td>
+                </tr>
+                <tr><td colspan="3">Tabela de nossos clientes.</td></tr>
+            </tbody>
+        </table>
+
+        <ul><!--Lista no HTML-->
+            <li>Item da lista 1</li><!--Itens da lista usando tag li-->
+            <li>Item da lista 2</li>
+            <li>Item da lista 3</li>
+        </ul>
+
+        <!--Fomularios ou formas de entrada/input no HTML-->
+        <form action="/action_page.php">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username"
+            name="username"><br>
+            <label for="pwd">Password:</label><br>
+            <input type="password" id="password"
+            name="password"><br>
+            <input type="submit" value="Subimt">
+        </form>
+
+        <!--Validações agora podem ser feitas pelo HTML tambem sem a necessidade do JS.-->
+        <form action="/action_page.php">
+            <label for="phone">Enter a phone number:</label>
+            <br><br>
+            <input type="tel" id="phone" name="phone"
+            placeholder="123-45-678"
+            pattern="[0-9] {3}-[0-9] {2}-[0-9] {3}"
+            required><br><br>
+            <small>Format: 123-45-678</small><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>

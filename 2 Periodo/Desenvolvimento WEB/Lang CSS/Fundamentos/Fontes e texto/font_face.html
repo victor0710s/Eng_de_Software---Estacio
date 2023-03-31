@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>@font-face</title>
+    </head>
+    <body>
+        <style>
+            @font-face {
+                font-family: myFirstfont;
+                src: local('game_over.ttf'),
+                url('fonts_led/game_over.ttf') format('ttf');
+            }
+
+            div {
+                font-family: myFirstfont;
+                font-size: 100px;
+            }
+        </style>
+        <div>
+            Estou usando a font definida pelo dev no @font-face
+        </div>
+    </body>
+</html>

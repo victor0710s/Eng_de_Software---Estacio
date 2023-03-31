@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="pt">
+        <title>Tabelas em HTMl</title>
+    </head>
+    <style>
+        table {
+            font-family: Arial, sans-serif;
+            border-collapse: collapse; width: 35%;
+        }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+    <body>
+        <table> <!--Indica o inicio de uma tabela na pagina-->
+            <thead> <!--Componhe o cabeçalho da tabela-->
+                <tr> <!--tr cria a linha e th a divide em colunas-->
+                    <th>Empresa</th>
+                    <th>Contato</th>
+                    <th>País</th>
+                </tr>
+            </thead>
+            <tbody><!--Componhe o corpo de uma tabela ou seja seu conteudo-->
+                <tr>
+                    <td>Alfreds Futterkiste</td> <!--Representa as colunas inserindo suas infos-->
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                </tr>
+                <tr>
+                    <td>VSS Develops</td>
+                    <td>Victor Silva</td>
+                    <td>Brasil</td>
+                </tr>
+                <tr>
+                    <td>Ernst Handel</td>
+                    <td>Roland Mendel</td>
+                    <td>Austria</td>
+                </tr>
+            </tbody>
+            <tfoot> <!--Representa o rodapé da tabela-->
+                <tr><td colspan="3">Atendemos 24 horas</td></tr>
+            </tfoot>
+        </table>
+        <br>
+        <img src="Tabelas Ex.jpg" alt="Exemplo de Tabelas">
+    </body>
+</html>

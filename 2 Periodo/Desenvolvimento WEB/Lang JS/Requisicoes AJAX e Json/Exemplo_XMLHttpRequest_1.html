@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Requisição XMLHttpRequest</title>
+    </head>
+
+    <body>
+        <h1>Imagens Aleatórias de Cachorros</h1>
+        <p>Ao clicar no botão será gerada uma imagem aleatoria de algum cachorro,
+            e isso ocorrerá toda vez que o botão for clicado</p>
+            <img id="img_dog" src="" alt="Aguardando imagem ser carregada">
+        <button onclick="carregarImg()">Carregar Imagem</button>
+    </body>
+
+    <script type="text/javascript">
+        function carregarImg() {
+            var xmlHttpRequest = new XMLHttpRequest();
+            var url = "https://dog.ceo/api/breeds/image/random"
+
+            xmlHttpRequest.open('GET', url, true);
+
+            xmlHttpRequest.onreadystatechange = function() {
+                if (xmlHttpRequest.readyState == 3) {
+                    console.log('Carregando o conteúdo...');
+                }
+                if (xmlHttpRequest.readyState == 4) {
+
+                    var jsonResponse = JSON.parse(xmlHttpRequest.responseText);
+
+                    console.log('Requisição Finalizada');
+                    console.log('Resultado da Requisição: ' + jsonResponse);
+                    console.log('Resultado da Requisição: ' + jsonResponse.message);
+                
+                    var imgDog = document.getElementById("img_dog")
+                    imgDog.src = jsonResponse.message;
+                }
+            };
+
+            xmlHttpRequest.send(null)
+
+        }
+    </script>
+</html>

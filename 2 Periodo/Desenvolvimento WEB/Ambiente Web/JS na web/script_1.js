@@ -1,0 +1,1 @@
+document.write("Estou vindo de um arquivo externo ao html!!")

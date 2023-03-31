@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pseudoclasses e PSeudoelementos</title>
+    </head>
+
+    <style>
+        p#sem_pseudo {
+            font-size: 15px;
+            color: black;
+        }
+            p#sem_pseudo span.p_letra_maior {
+                font-size: 25px;
+                color: blue;
+            }
+
+        p#com_pseudo {
+            font-size: 15px;
+            color: black;
+        }
+            p#com_pseudo::first-letter {
+                font-size: 25px;
+                color: blue;
+            }
+
+    </style>
+
+    <body>
+        <p id="sem_pseudo">
+            <span class="p_letra_maior">T</span>exto do parágrafo sem pseudoclasse e pseudoelemento.
+        </p>
+
+        <p id="com_pseudo">
+            Texto do parágrafo com peseudoclasse e pseudoelemento.
+        </p>
+    </body>
+</html>

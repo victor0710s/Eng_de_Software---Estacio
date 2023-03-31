@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Requisição API Fetch</title>
+    </head>
+
+    <body>
+        <h1>Imagens Aleatórias de Cachorros</h1>
+        <p>Ao clicar no botão será gerada uma imagem aleatoria de algum cachorro,
+            e isso ocorrerá toda vez que o botão for clicado</p>
+            <img id="img_dog" src="" alt="Aguardando imagem ser carregada">
+        <button onclick="carregarImg()">Carregar Imagem</button>
+    </body>
+
+    <script type="text/javascript">
+        function carregarImg() {
+
+            var url = "https://dog.ceo/api/breeds/image/random";
+            fetch(url, {
+                method: "get"
+            })
+            .then(function(response) {
+                response.json().then(function(data) {
+                    console.log("Resultado da Requisição :" + data.message);
+
+                    var imgDog = document.getElementById("img_dog");
+                    imgDog.src = data.message
+                });
+            })
+            .catch(function(err) {
+                console.log("O seguinto erro ocorreu durante a requisição: " + err.message);
+            });
+           
+        }
+    </script>
+</html>

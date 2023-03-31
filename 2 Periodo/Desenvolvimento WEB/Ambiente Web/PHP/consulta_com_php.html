@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesquisa php com HTML</title>
+</head>
+<body>
+<php inclue 'conector.php' ?>
+<h1>Pagina de Teste</h1>
+<php 
+$query="SELECT nome, endereco FROM tabela" ;
+$result_query = mysql_query($query)
+    or die(" Erro na consulta aos dados");
+while ($row = mysql_fetch_array($result_query)) {
+    echo $row[nome]."--".$row[endereco]."<br/>";
+}
+?>
+</body>
+</html>
